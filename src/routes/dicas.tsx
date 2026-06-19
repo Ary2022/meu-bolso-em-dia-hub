@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { Clock, Filter } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { ARTICLES, CATEGORIES } from "@/lib/content";
@@ -57,8 +57,8 @@ function TipsPage() {
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((a, idx) => (
-          <>
-            <article key={a.slug} className="flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-soft transition-transform hover:-translate-y-0.5">
+          <Fragment key={a.slug}>
+            <article className="flex flex-col rounded-2xl border border-border bg-card overflow-hidden shadow-soft transition-transform hover:-translate-y-0.5">
               <div className="relative h-40 gradient-hero flex items-center justify-center text-5xl">
                 <span aria-hidden>{a.emoji}</span>
                 <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2 py-0.5 text-[10px] font-semibold text-primary">
@@ -77,11 +77,11 @@ function TipsPage() {
               </div>
             </article>
             {idx === 2 && (
-              <div key="sponsor" className="sm:col-span-2 lg:col-span-3">
+              <div className="sm:col-span-2 lg:col-span-3">
                 <SponsorInlineCard placement="articles" />
               </div>
             )}
-          </>
+          </Fragment>
         ))}
       </div>
     </div>
