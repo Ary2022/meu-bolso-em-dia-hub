@@ -59,21 +59,21 @@ function Home() {
           <div className="relative">
             <div className="gradient-card relative rounded-3xl border border-border p-6 shadow-soft">
               <div className="grid gap-3 sm:grid-cols-2">
-                <Stat icon={PiggyBank} label="Poupança" value="+R$ 4.820" tint="accent" />
-                <Stat icon={TrendingUp} label="Renda extra" value="+R$ 1.250" tint="primary" />
-                <Stat icon={Receipt} label="Gastos" value="-12%" tint="warning" />
-                <Stat icon={Target} label="Meta" value="83%" tint="accent" />
+                <Stat icon={PiggyBank} label={t("home.stats.savings")} value="+R$ 4.820" tint="accent" />
+                <Stat icon={TrendingUp} label={t("home.stats.extra")} value="+R$ 1.250" tint="primary" />
+                <Stat icon={Receipt} label={t("home.stats.spend")} value="-12%" tint="warning" />
+                <Stat icon={Target} label={t("home.stats.goal")} value="83%" tint="accent" />
               </div>
               <div className="mt-5 rounded-2xl border border-border bg-background/60 p-4">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <span>Orçamento mensal</span>
+                  <span>{t("home.budget")}</span>
                   <span>R$ 5.400 / R$ 6.500</span>
                 </div>
                 <div className="mt-2 h-2 w-full rounded-full bg-secondary">
                   <div className="h-2 rounded-full gradient-hero" style={{ width: "83%" }} />
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-2 text-center text-[11px]">
-                  {["Casa", "Lazer", "Educação"].map(l => (
+                  {[t("home.cats.home"), t("home.cats.leisure"), t("home.cats.education")].map(l => (
                     <div key={l} className="rounded-lg bg-muted px-2 py-2">
                       <div className="font-semibold text-foreground">{l}</div>
                     </div>
