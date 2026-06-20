@@ -436,7 +436,15 @@ const es: Dict = {
     ],
   },
   footer: { rights: "Todos los derechos reservados.", privacy: "Política de Privacidad", terms: "Términos de Uso", faq: "FAQ", description: "Educación financiera simple, práctica y accesible." },
-  common: { learnMore: "Saber más", backHome: "Volver al inicio", selectLanguage: "Seleccionar idioma", toggleTheme: "Cambiar tema" },
+  common: { learnMore: "Saber más", backHome: "Volver al inicio", selectLanguage: "Seleccionar idioma", toggleTheme: "Cambiar tema", info: "Información", madeWith: "Hecho con ❤️ por la libertad financiera." },
+  home: {
+    stats: { savings: "Ahorro", extra: "Ingresos extra", spend: "Gastos", goal: "Meta" },
+    budget: "Presupuesto mensual",
+    cats: { home: "Hogar", leisure: "Ocio", education: "Educación" },
+    leadBadge: "Newsletter",
+    leadBullets: ["Contenido breve y práctico", "0 spam — cancela cuando quieras", "Consejos en 3 idiomas"],
+  },
+  contactExtra: { quickMessage: "Mensaje rápido" },
 };
 
 export const dictionaries = { "pt-BR": ptBR, en, es } as const;
