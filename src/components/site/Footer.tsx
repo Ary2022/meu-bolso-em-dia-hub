@@ -41,7 +41,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm font-semibold text-foreground">Info</h4>
+            <h4 className="text-sm font-semibold text-foreground">{t("common.info")}</h4>
             <ul className="mt-3 space-y-2 text-sm">
               <li><Link to="/sobre" className="text-muted-foreground hover:text-foreground">{t("nav.about")}</Link></li>
               <li><Link to="/contato" className="text-muted-foreground hover:text-foreground">{t("nav.contact")}</Link></li>
@@ -54,7 +54,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <p>© {year} {t("brand")} · meubolsoemdia.com.br · {t("footer.rights")}</p>
-          <p>Made with ❤️ for financial freedom.</p>
+          <p>{t("common.madeWith")}</p>
         </div>
       </div>
     </footer>
