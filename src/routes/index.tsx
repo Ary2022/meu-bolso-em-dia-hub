@@ -117,14 +117,14 @@ function Home() {
         <div className="grid gap-8 rounded-3xl border border-border gradient-card p-6 sm:p-10 lg:grid-cols-[1.2fr_1fr] shadow-soft">
           <div>
             <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-              <GraduationCap className="h-3.5 w-3.5" /> Newsletter
+              <GraduationCap className="h-3.5 w-3.5" /> {t("home.leadBadge")}
             </span>
             <h2 className="mt-4 font-display text-3xl font-bold text-foreground sm:text-4xl text-balance">{t("lead.title")}</h2>
             <p className="mt-3 text-muted-foreground">{t("lead.subtitle")}</p>
             <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
-              <li>✅ Conteúdos curtos e práticos</li>
-              <li>✅ 0 spam — você cancela quando quiser</li>
-              <li>✅ Dicas em 3 idiomas</li>
+              {dict.home.leadBullets.map(b => (
+                <li key={b}>✅ {b}</li>
+              ))}
             </ul>
           </div>
           <div className="rounded-2xl border border-border bg-background p-5">
