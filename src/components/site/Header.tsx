@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
-import { Menu, X, Wallet } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import logoAsset from "@/assets/logo-meubolsoemdia.jpg.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
