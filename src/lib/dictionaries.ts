@@ -313,7 +313,15 @@ const en: Dict = {
     ],
   },
   footer: { rights: "All rights reserved.", privacy: "Privacy Policy", terms: "Terms of Use", faq: "FAQ", description: "Simple, practical and accessible financial education." },
-  common: { learnMore: "Learn more", backHome: "Back to home", selectLanguage: "Select language", toggleTheme: "Toggle theme" },
+  common: { learnMore: "Learn more", backHome: "Back to home", selectLanguage: "Select language", toggleTheme: "Toggle theme", info: "Info", madeWith: "Made with ❤️ for financial freedom." },
+  home: {
+    stats: { savings: "Savings", extra: "Side income", spend: "Spending", goal: "Goal" },
+    budget: "Monthly budget",
+    cats: { home: "Home", leisure: "Leisure", education: "Education" },
+    leadBadge: "Newsletter",
+    leadBullets: ["Short, practical content", "0 spam — unsubscribe anytime", "Tips in 3 languages"],
+  },
+  contactExtra: { quickMessage: "Quick message" },
 };
 
 const es: Dict = {
