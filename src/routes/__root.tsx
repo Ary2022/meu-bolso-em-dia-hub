@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Meu Bolso em Dia",
-          url: "https://meubolsoemdia.com.br",
+          url: "https://meubolsoemdia.com",
           description: "Portal de educação financeira com dicas, livros e ideias de renda extra.",
         }),
       },
