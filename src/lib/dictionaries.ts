@@ -177,7 +177,21 @@ const ptBR = {
     backHome: "Voltar para a home",
     selectLanguage: "Selecionar idioma",
     toggleTheme: "Alternar tema",
+    info: "Informações",
+    madeWith: "Feito com ❤️ pela liberdade financeira.",
   },
+  home: {
+    stats: { savings: "Poupança", extra: "Renda extra", spend: "Gastos", goal: "Meta" },
+    budget: "Orçamento mensal",
+    cats: { home: "Casa", leisure: "Lazer", education: "Educação" },
+    leadBadge: "Newsletter",
+    leadBullets: [
+      "Conteúdos curtos e práticos",
+      "0 spam — você cancela quando quiser",
+      "Dicas em 3 idiomas",
+    ],
+  },
+  contactExtra: { quickMessage: "Mensagem rápida" },
 };
 
 const en: Dict = {
