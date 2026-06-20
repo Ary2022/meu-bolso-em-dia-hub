@@ -18,7 +18,7 @@ export function Footer() {
             </div>
             <p className="mt-3 max-w-md text-sm text-muted-foreground">{t("footer.description")}</p>
             <div className="mt-4 flex items-center gap-2">
-              <a href="mailto:contato@meubolsoemdia.com.br" aria-label="Email" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">
+              <a href="mailto:contato@meubolsoemdia.com" aria-label="Email" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">
                 <Mail className="h-4 w-4" />
               </a>
               <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">
@@ -53,7 +53,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-2 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <p>© {year} {t("brand")} · meubolsoemdia.com.br · {t("footer.rights")}</p>
+          <p>© {year} {t("brand")} · meubolsoemdia.com · {t("footer.rights")}</p>
           <p>{t("common.madeWith")}</p>
         </div>
       </div>

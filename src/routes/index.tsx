@@ -50,7 +50,7 @@ function Home() {
               <Link to="/livros" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-soft hover:opacity-90">
                 {t("hero.ctaSecondary")}
               </Link>
-              <a href="https://app.meubolsoemdia.com.br" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground hover:bg-secondary">
+              <a href="https://app.meubolsoemdia.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground hover:bg-secondary">
                 <Smartphone className="h-4 w-4" /> {t("hero.ctaApp")}
               </a>
             </div>
@@ -144,7 +144,7 @@ function Home() {
             <p className="mt-3 max-w-xl text-white/85">{t("app.desc")}</p>
             <p className="mt-2 text-xs text-white/70">{t("app.note")}</p>
             <a
-              href="https://app.meubolsoemdia.com.br"
+              href="https://app.meubolsoemdia.com"
               target="_blank" rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-primary hover:bg-white/95"
             >

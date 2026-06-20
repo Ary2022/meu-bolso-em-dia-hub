@@ -42,7 +42,7 @@ function ContactPage() {
     if (!parsed.success) { setStatus("error"); setErrorMsg(parsed.error.issues[0]?.message ?? "Erro"); return; }
     // Compose mailto fallback (no backend email needed)
     const body = `${parsed.data.message}\n\n— ${parsed.data.name} (${parsed.data.email})`;
-    const url = `mailto:contato@meubolsoemdia.com.br?subject=${encodeURIComponent(parsed.data.subject)}&body=${encodeURIComponent(body)}`;
+    const url = `mailto:contato@meubolsoemdia.com?subject=${encodeURIComponent(parsed.data.subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = url;
     setStatus("success");
     (e.target as HTMLFormElement).reset();
@@ -85,11 +85,11 @@ function ContactPage() {
 
         <aside className="space-y-3">
           <h2 className="font-display text-lg font-semibold text-foreground">{t("contact.channels")}</h2>
-          <a href="mailto:contato@meubolsoemdia.com.br" className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:bg-secondary">
+          <a href="mailto:contato@meubolsoemdia.com" className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:bg-secondary">
             <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary"><Mail className="h-5 w-5" /></span>
             <div>
               <div className="text-xs text-muted-foreground">{t("contact.emailContact")}</div>
-              <div className="text-sm font-semibold">contato@meubolsoemdia.com.br</div>
+              <div className="text-sm font-semibold">contato@meubolsoemdia.com</div>
             </div>
           </a>
           <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:bg-secondary">
