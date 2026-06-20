@@ -96,7 +96,7 @@ function ContactPage() {
             <span className="grid h-10 w-10 place-items-center rounded-lg bg-accent/15 text-accent"><MessageCircle className="h-5 w-5" /></span>
             <div>
               <div className="text-xs text-muted-foreground">{t("contact.whatsapp")}</div>
-              <div className="text-sm font-semibold">Mensagem rápida</div>
+              <div className="text-sm font-semibold">{t("contactExtra.quickMessage")}</div>
             </div>
           </a>
           <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:bg-secondary">

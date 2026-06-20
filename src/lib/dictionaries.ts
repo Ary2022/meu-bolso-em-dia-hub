@@ -177,7 +177,21 @@ const ptBR = {
     backHome: "Voltar para a home",
     selectLanguage: "Selecionar idioma",
     toggleTheme: "Alternar tema",
+    info: "Informações",
+    madeWith: "Feito com ❤️ pela liberdade financeira.",
   },
+  home: {
+    stats: { savings: "Poupança", extra: "Renda extra", spend: "Gastos", goal: "Meta" },
+    budget: "Orçamento mensal",
+    cats: { home: "Casa", leisure: "Lazer", education: "Educação" },
+    leadBadge: "Newsletter",
+    leadBullets: [
+      "Conteúdos curtos e práticos",
+      "0 spam — você cancela quando quiser",
+      "Dicas em 3 idiomas",
+    ],
+  },
+  contactExtra: { quickMessage: "Mensagem rápida" },
 };
 
 const en: Dict = {
@@ -299,7 +313,15 @@ const en: Dict = {
     ],
   },
   footer: { rights: "All rights reserved.", privacy: "Privacy Policy", terms: "Terms of Use", faq: "FAQ", description: "Simple, practical and accessible financial education." },
-  common: { learnMore: "Learn more", backHome: "Back to home", selectLanguage: "Select language", toggleTheme: "Toggle theme" },
+  common: { learnMore: "Learn more", backHome: "Back to home", selectLanguage: "Select language", toggleTheme: "Toggle theme", info: "Info", madeWith: "Made with ❤️ for financial freedom." },
+  home: {
+    stats: { savings: "Savings", extra: "Side income", spend: "Spending", goal: "Goal" },
+    budget: "Monthly budget",
+    cats: { home: "Home", leisure: "Leisure", education: "Education" },
+    leadBadge: "Newsletter",
+    leadBullets: ["Short, practical content", "0 spam — unsubscribe anytime", "Tips in 3 languages"],
+  },
+  contactExtra: { quickMessage: "Quick message" },
 };
 
 const es: Dict = {
@@ -414,7 +436,15 @@ const es: Dict = {
     ],
   },
   footer: { rights: "Todos los derechos reservados.", privacy: "Política de Privacidad", terms: "Términos de Uso", faq: "FAQ", description: "Educación financiera simple, práctica y accesible." },
-  common: { learnMore: "Saber más", backHome: "Volver al inicio", selectLanguage: "Seleccionar idioma", toggleTheme: "Cambiar tema" },
+  common: { learnMore: "Saber más", backHome: "Volver al inicio", selectLanguage: "Seleccionar idioma", toggleTheme: "Cambiar tema", info: "Información", madeWith: "Hecho con ❤️ por la libertad financiera." },
+  home: {
+    stats: { savings: "Ahorro", extra: "Ingresos extra", spend: "Gastos", goal: "Meta" },
+    budget: "Presupuesto mensual",
+    cats: { home: "Hogar", leisure: "Ocio", education: "Educación" },
+    leadBadge: "Newsletter",
+    leadBullets: ["Contenido breve y práctico", "0 spam — cancela cuando quieras", "Consejos en 3 idiomas"],
+  },
+  contactExtra: { quickMessage: "Mensaje rápido" },
 };
 
 export const dictionaries = { "pt-BR": ptBR, en, es } as const;
