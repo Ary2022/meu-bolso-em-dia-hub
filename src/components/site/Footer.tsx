@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import { Wallet, Mail, MessageCircle, Instagram } from "lucide-react";
+import { Mail, MessageCircle, Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
+import logoAsset from "@/assets/logo-meubolsoemdia.jpg.asset.json";
 
 export function Footer() {
   const { t } = useI18n();
@@ -12,9 +13,7 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-xl gradient-hero text-white">
-                <Wallet className="h-5 w-5" />
-              </span>
+              <img src={logoAsset.url} alt={t("brand")} className="h-10 w-auto rounded-md" />
               <span className="font-display text-lg font-bold">{t("brand")}</span>
             </div>
             <p className="mt-3 max-w-md text-sm text-muted-foreground">{t("footer.description")}</p>

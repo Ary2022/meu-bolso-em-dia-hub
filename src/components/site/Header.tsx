@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
-import { Menu, X, Wallet } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
+import logoAsset from "@/assets/logo-meubolsoemdia.jpg.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -24,12 +25,10 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/70">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-xl gradient-hero text-white shadow-soft">
-            <Wallet className="h-5 w-5" />
-          </span>
-          <span className="flex flex-col leading-tight">
+          <img src={logoAsset.url} alt={t("brand")} className="h-10 w-auto rounded-md" />
+          <span className="hidden sm:flex flex-col leading-tight">
             <span className="font-display text-base font-bold text-foreground">{t("brand")}</span>
-            <span className="hidden sm:inline text-[11px] text-muted-foreground">{t("tagline")}</span>
+            <span className="text-[11px] text-muted-foreground">{t("tagline")}</span>
           </span>
         </Link>
 
