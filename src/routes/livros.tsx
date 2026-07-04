@@ -17,7 +17,7 @@ export const Route = createFileRoute("/livros")({
   component: BooksPage,
 });
 
-const WHATSAPP_NUMBER = "5500000000000"; // placeholder
+const WHATSAPP_NUMBER = "5521965449695";
 
 function priceBRLToString(v: number, lang: string) {
   const locale = lang === "en" ? "en-US" : lang === "es" ? "es-ES" : "pt-BR";
