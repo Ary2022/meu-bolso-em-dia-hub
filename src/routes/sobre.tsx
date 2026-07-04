@@ -9,9 +9,9 @@ export const Route = createFileRoute("/sobre")({
       { name: "description", content: "Nossa missão é levar educação financeira simples, acessível e prática para pessoas que querem organizar a vida." },
       { property: "og:title", content: "Sobre o Meu Bolso em Dia" },
       { property: "og:description", content: "Missão, visão e valores do Meu Bolso em Dia." },
-      { property: "og:url", content: "/sobre" },
+      { property: "og:url", content: "https://meubolsoemdia.com/sobre" },
     ],
-    links: [{ rel: "canonical", href: "/sobre" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/sobre" }],
   }),
   component: AboutPage,
 });

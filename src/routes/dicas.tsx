@@ -12,9 +12,9 @@ export const Route = createFileRoute("/dicas")({
       { name: "description", content: "Artigos curtos e práticos para poupar, controlar gastos, sair das dívidas e criar renda extra." },
       { property: "og:title", content: "Dicas e artigos de educação financeira" },
       { property: "og:description", content: "Conteúdo curto e prático para colocar seu bolso em dia." },
-      { property: "og:url", content: "/dicas" },
+      { property: "og:url", content: "https://meubolsoemdia.com/dicas" },
     ],
-    links: [{ rel: "canonical", href: "/dicas" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/dicas" }],
   }),
   component: TipsPage,
 });

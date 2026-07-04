@@ -10,9 +10,9 @@ export const Route = createFileRoute("/renda-extra")({
       { name: "description", content: "Ideias práticas de renda extra com investimento inicial, dificuldade, tempo necessário e primeiros passos." },
       { property: "og:title", content: "Ideias de Renda Extra" },
       { property: "og:description", content: "Inspirações para começar a ganhar mais com pouco investimento." },
-      { property: "og:url", content: "/renda-extra" },
+      { property: "og:url", content: "https://meubolsoemdia.com/renda-extra" },
     ],
-    links: [{ rel: "canonical", href: "/renda-extra" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/renda-extra" }],
   }),
   component: IncomePage,
 });

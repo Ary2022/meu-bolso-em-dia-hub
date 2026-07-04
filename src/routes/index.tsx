@@ -11,9 +11,9 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Organize seu dinheiro, poupe mais e crie renda extra com dicas simples e práticas em português, inglês e espanhol." },
       { property: "og:title", content: "Meu Bolso em Dia — Educação Financeira" },
       { property: "og:description", content: "Dicas, livros e ferramentas para colocar seu bolso em dia." },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://meubolsoemdia.com/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/" }],
   }),
   component: Home,
 });

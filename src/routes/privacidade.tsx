@@ -7,9 +7,9 @@ export const Route = createFileRoute("/privacidade")({
       { title: "Política de Privacidade — Meu Bolso em Dia" },
       { name: "description", content: "Como o Meu Bolso em Dia coleta, usa e protege seus dados." },
       { property: "og:title", content: "Política de Privacidade" },
-      { property: "og:url", content: "/privacidade" },
+      { property: "og:url", content: "https://meubolsoemdia.com/privacidade" },
     ],
-    links: [{ rel: "canonical", href: "/privacidade" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/privacidade" }],
   }),
   component: PrivacyPage,
 });

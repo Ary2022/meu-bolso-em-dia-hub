@@ -12,9 +12,9 @@ export const Route = createFileRoute("/patrocinadores")({
       { name: "description", content: "Conheça os parceiros e patrocinadores que apoiam a educação financeira no Meu Bolso em Dia." },
       { property: "og:title", content: "Parceiros e Patrocinadores" },
       { property: "og:description", content: "Marcas que apoiam educação financeira simples e prática." },
-      { property: "og:url", content: "/patrocinadores" },
+      { property: "og:url", content: "https://meubolsoemdia.com/patrocinadores" },
     ],
-    links: [{ rel: "canonical", href: "/patrocinadores" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/patrocinadores" }],
   }),
   component: SponsorsPage,
 });
