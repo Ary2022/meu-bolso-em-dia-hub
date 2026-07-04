@@ -21,7 +21,7 @@ export function Footer() {
               <a href="mailto:contato@meubolsoemdia.com" aria-label="Email" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">
                 <Mail className="h-4 w-4" />
               </a>
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">
+              <a href="https://wa.me/5521965449695" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">
                 <MessageCircle className="h-4 w-4" />
               </a>
               <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border hover:bg-secondary">

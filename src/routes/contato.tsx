@@ -92,7 +92,7 @@ function ContactPage() {
               <div className="text-sm font-semibold">contato@meubolsoemdia.com</div>
             </div>
           </a>
-          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:bg-secondary">
+          <a href="https://wa.me/5521965449695" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 hover:bg-secondary">
             <span className="grid h-10 w-10 place-items-center rounded-lg bg-accent/15 text-accent"><MessageCircle className="h-5 w-5" /></span>
             <div>
               <div className="text-xs text-muted-foreground">{t("contact.whatsapp")}</div>
