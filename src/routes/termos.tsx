@@ -7,9 +7,9 @@ export const Route = createFileRoute("/termos")({
       { title: "Termos de Uso — Meu Bolso em Dia" },
       { name: "description", content: "Termos de uso do portal Meu Bolso em Dia." },
       { property: "og:title", content: "Termos de Uso" },
-      { property: "og:url", content: "/termos" },
+      { property: "og:url", content: "https://meubolsoemdia.com/termos" },
     ],
-    links: [{ rel: "canonical", href: "/termos" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/termos" }],
   }),
   component: TermsPage,
 });

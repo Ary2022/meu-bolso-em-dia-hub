@@ -9,9 +9,9 @@ export const Route = createFileRoute("/faq")({
       { title: "Perguntas Frequentes — Meu Bolso em Dia" },
       { name: "description", content: "Respostas para as principais dúvidas sobre o Meu Bolso em Dia." },
       { property: "og:title", content: "Perguntas Frequentes" },
-      { property: "og:url", content: "/faq" },
+      { property: "og:url", content: "https://meubolsoemdia.com/faq" },
     ],
-    links: [{ rel: "canonical", href: "/faq" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/faq" }],
     scripts: [
       {
         type: "application/ld+json",

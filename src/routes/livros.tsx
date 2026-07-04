@@ -10,9 +10,9 @@ export const Route = createFileRoute("/livros")({
       { name: "description", content: "Livros, e-books e cursos práticos para organizar seu dinheiro, poupar mais e criar renda extra." },
       { property: "og:title", content: "Livros e e-books de educação financeira" },
       { property: "og:description", content: "Materiais práticos para transformar sua vida financeira." },
-      { property: "og:url", content: "/livros" },
+      { property: "og:url", content: "https://meubolsoemdia.com/livros" },
     ],
-    links: [{ rel: "canonical", href: "/livros" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/livros" }],
   }),
   component: BooksPage,
 });

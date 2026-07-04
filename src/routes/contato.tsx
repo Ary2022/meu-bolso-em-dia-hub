@@ -11,9 +11,9 @@ export const Route = createFileRoute("/contato")({
       { name: "description", content: "Fale com a equipe Meu Bolso em Dia: dúvidas, parcerias e patrocínios." },
       { property: "og:title", content: "Contato — Meu Bolso em Dia" },
       { property: "og:description", content: "Tire dúvidas, envie sugestões ou converse sobre parcerias." },
-      { property: "og:url", content: "/contato" },
+      { property: "og:url", content: "https://meubolsoemdia.com/contato" },
     ],
-    links: [{ rel: "canonical", href: "/contato" }],
+    links: [{ rel: "canonical", href: "https://meubolsoemdia.com/contato" }],
   }),
   component: ContactPage,
 });
