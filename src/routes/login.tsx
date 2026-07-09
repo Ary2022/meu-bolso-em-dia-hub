@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 import { Loader2, Wallet, ArrowLeft } from "lucide-react";
 
 type Search = { redirect?: string };
@@ -53,7 +53,7 @@ function LoginPage() {
           },
         });
         if (error) throw error;
-        toast({ title: "Conta criada!", description: "Bem-vindo(a) ao Meu Bolso em Dia IA." });
+        toast.success("Conta criada! Bem-vindo(a).");
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
         if (error) throw error;
@@ -61,7 +61,7 @@ function LoginPage() {
       nav({ to: dest, replace: true });
     } catch (err) {
       const msg = err instanceof Error ? err.message : "Erro ao autenticar";
-      toast({ title: "Ops", description: msg, variant: "destructive" });
+      toast.error(msg);
     } finally {
       setLoading(false);
     }

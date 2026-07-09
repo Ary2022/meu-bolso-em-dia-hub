@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { toast } from "@/components/ui/use-toast";
+import { toast } from "sonner";
 import { Loader2, Sparkles } from "lucide-react";
 
 export const Route = createFileRoute("/_authenticated/onboarding")({
@@ -68,10 +68,10 @@ function Onboarding() {
       ];
       await supabase.from("categories").insert(defaults.map((c) => ({ ...c, user_id: userId })));
 
-      toast({ title: "Tudo pronto!", description: "Bem-vindo(a) ao seu app." });
+      toast.success("Tudo pronto!");
       nav({ to: "/app/dashboard", replace: true });
     } catch (err) {
-      toast({ title: "Erro", description: err instanceof Error ? err.message : "Tente novamente", variant: "destructive" });
+      toast.error(err instanceof Error ? err.message : "Tente novamente");
     } finally {
       setLoading(false);
     }
