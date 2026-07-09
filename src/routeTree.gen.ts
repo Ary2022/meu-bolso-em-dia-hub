@@ -25,6 +25,16 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuthenticatedOnboardingRouteImport } from './routes/_authenticated/onboarding'
 import { Route as AuthenticatedAppRouteImport } from './routes/_authenticated/app'
 import { Route as AuthenticatedAppIndexRouteImport } from './routes/_authenticated/app.index'
+import { Route as AuthenticatedAppReservaRouteImport } from './routes/_authenticated/app.reserva'
+import { Route as AuthenticatedAppRelatoriosRouteImport } from './routes/_authenticated/app.relatorios'
+import { Route as AuthenticatedAppPerfilRouteImport } from './routes/_authenticated/app.perfil'
+import { Route as AuthenticatedAppOrcamentosRouteImport } from './routes/_authenticated/app.orcamentos'
+import { Route as AuthenticatedAppMetasRouteImport } from './routes/_authenticated/app.metas'
+import { Route as AuthenticatedAppLancamentosRouteImport } from './routes/_authenticated/app.lancamentos'
+import { Route as AuthenticatedAppDividasRouteImport } from './routes/_authenticated/app.dividas'
+import { Route as AuthenticatedAppDashboardRouteImport } from './routes/_authenticated/app.dashboard'
+import { Route as AuthenticatedAppConsultorIaRouteImport } from './routes/_authenticated/app.consultor-ia'
+import { Route as AuthenticatedAppConfiguracoesRouteImport } from './routes/_authenticated/app.configuracoes'
 
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
@@ -105,6 +115,62 @@ const AuthenticatedAppIndexRoute = AuthenticatedAppIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AuthenticatedAppRoute,
 } as any)
+const AuthenticatedAppReservaRoute = AuthenticatedAppReservaRouteImport.update({
+  id: '/reserva',
+  path: '/reserva',
+  getParentRoute: () => AuthenticatedAppRoute,
+} as any)
+const AuthenticatedAppRelatoriosRoute =
+  AuthenticatedAppRelatoriosRouteImport.update({
+    id: '/relatorios',
+    path: '/relatorios',
+    getParentRoute: () => AuthenticatedAppRoute,
+  } as any)
+const AuthenticatedAppPerfilRoute = AuthenticatedAppPerfilRouteImport.update({
+  id: '/perfil',
+  path: '/perfil',
+  getParentRoute: () => AuthenticatedAppRoute,
+} as any)
+const AuthenticatedAppOrcamentosRoute =
+  AuthenticatedAppOrcamentosRouteImport.update({
+    id: '/orcamentos',
+    path: '/orcamentos',
+    getParentRoute: () => AuthenticatedAppRoute,
+  } as any)
+const AuthenticatedAppMetasRoute = AuthenticatedAppMetasRouteImport.update({
+  id: '/metas',
+  path: '/metas',
+  getParentRoute: () => AuthenticatedAppRoute,
+} as any)
+const AuthenticatedAppLancamentosRoute =
+  AuthenticatedAppLancamentosRouteImport.update({
+    id: '/lancamentos',
+    path: '/lancamentos',
+    getParentRoute: () => AuthenticatedAppRoute,
+  } as any)
+const AuthenticatedAppDividasRoute = AuthenticatedAppDividasRouteImport.update({
+  id: '/dividas',
+  path: '/dividas',
+  getParentRoute: () => AuthenticatedAppRoute,
+} as any)
+const AuthenticatedAppDashboardRoute =
+  AuthenticatedAppDashboardRouteImport.update({
+    id: '/dashboard',
+    path: '/dashboard',
+    getParentRoute: () => AuthenticatedAppRoute,
+  } as any)
+const AuthenticatedAppConsultorIaRoute =
+  AuthenticatedAppConsultorIaRouteImport.update({
+    id: '/consultor-ia',
+    path: '/consultor-ia',
+    getParentRoute: () => AuthenticatedAppRoute,
+  } as any)
+const AuthenticatedAppConfiguracoesRoute =
+  AuthenticatedAppConfiguracoesRouteImport.update({
+    id: '/configuracoes',
+    path: '/configuracoes',
+    getParentRoute: () => AuthenticatedAppRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -121,6 +187,16 @@ export interface FileRoutesByFullPath {
   '/termos': typeof TermosRoute
   '/app': typeof AuthenticatedAppRouteWithChildren
   '/onboarding': typeof AuthenticatedOnboardingRoute
+  '/app/configuracoes': typeof AuthenticatedAppConfiguracoesRoute
+  '/app/consultor-ia': typeof AuthenticatedAppConsultorIaRoute
+  '/app/dashboard': typeof AuthenticatedAppDashboardRoute
+  '/app/dividas': typeof AuthenticatedAppDividasRoute
+  '/app/lancamentos': typeof AuthenticatedAppLancamentosRoute
+  '/app/metas': typeof AuthenticatedAppMetasRoute
+  '/app/orcamentos': typeof AuthenticatedAppOrcamentosRoute
+  '/app/perfil': typeof AuthenticatedAppPerfilRoute
+  '/app/relatorios': typeof AuthenticatedAppRelatoriosRoute
+  '/app/reserva': typeof AuthenticatedAppReservaRoute
   '/app/': typeof AuthenticatedAppIndexRoute
 }
 export interface FileRoutesByTo {
@@ -137,6 +213,16 @@ export interface FileRoutesByTo {
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
   '/onboarding': typeof AuthenticatedOnboardingRoute
+  '/app/configuracoes': typeof AuthenticatedAppConfiguracoesRoute
+  '/app/consultor-ia': typeof AuthenticatedAppConsultorIaRoute
+  '/app/dashboard': typeof AuthenticatedAppDashboardRoute
+  '/app/dividas': typeof AuthenticatedAppDividasRoute
+  '/app/lancamentos': typeof AuthenticatedAppLancamentosRoute
+  '/app/metas': typeof AuthenticatedAppMetasRoute
+  '/app/orcamentos': typeof AuthenticatedAppOrcamentosRoute
+  '/app/perfil': typeof AuthenticatedAppPerfilRoute
+  '/app/relatorios': typeof AuthenticatedAppRelatoriosRoute
+  '/app/reserva': typeof AuthenticatedAppReservaRoute
   '/app': typeof AuthenticatedAppIndexRoute
 }
 export interface FileRoutesById {
@@ -156,6 +242,16 @@ export interface FileRoutesById {
   '/termos': typeof TermosRoute
   '/_authenticated/app': typeof AuthenticatedAppRouteWithChildren
   '/_authenticated/onboarding': typeof AuthenticatedOnboardingRoute
+  '/_authenticated/app/configuracoes': typeof AuthenticatedAppConfiguracoesRoute
+  '/_authenticated/app/consultor-ia': typeof AuthenticatedAppConsultorIaRoute
+  '/_authenticated/app/dashboard': typeof AuthenticatedAppDashboardRoute
+  '/_authenticated/app/dividas': typeof AuthenticatedAppDividasRoute
+  '/_authenticated/app/lancamentos': typeof AuthenticatedAppLancamentosRoute
+  '/_authenticated/app/metas': typeof AuthenticatedAppMetasRoute
+  '/_authenticated/app/orcamentos': typeof AuthenticatedAppOrcamentosRoute
+  '/_authenticated/app/perfil': typeof AuthenticatedAppPerfilRoute
+  '/_authenticated/app/relatorios': typeof AuthenticatedAppRelatoriosRoute
+  '/_authenticated/app/reserva': typeof AuthenticatedAppReservaRoute
   '/_authenticated/app/': typeof AuthenticatedAppIndexRoute
 }
 export interface FileRouteTypes {
@@ -175,6 +271,16 @@ export interface FileRouteTypes {
     | '/termos'
     | '/app'
     | '/onboarding'
+    | '/app/configuracoes'
+    | '/app/consultor-ia'
+    | '/app/dashboard'
+    | '/app/dividas'
+    | '/app/lancamentos'
+    | '/app/metas'
+    | '/app/orcamentos'
+    | '/app/perfil'
+    | '/app/relatorios'
+    | '/app/reserva'
     | '/app/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -191,6 +297,16 @@ export interface FileRouteTypes {
     | '/sobre'
     | '/termos'
     | '/onboarding'
+    | '/app/configuracoes'
+    | '/app/consultor-ia'
+    | '/app/dashboard'
+    | '/app/dividas'
+    | '/app/lancamentos'
+    | '/app/metas'
+    | '/app/orcamentos'
+    | '/app/perfil'
+    | '/app/relatorios'
+    | '/app/reserva'
     | '/app'
   id:
     | '__root__'
@@ -209,6 +325,16 @@ export interface FileRouteTypes {
     | '/termos'
     | '/_authenticated/app'
     | '/_authenticated/onboarding'
+    | '/_authenticated/app/configuracoes'
+    | '/_authenticated/app/consultor-ia'
+    | '/_authenticated/app/dashboard'
+    | '/_authenticated/app/dividas'
+    | '/_authenticated/app/lancamentos'
+    | '/_authenticated/app/metas'
+    | '/_authenticated/app/orcamentos'
+    | '/_authenticated/app/perfil'
+    | '/_authenticated/app/relatorios'
+    | '/_authenticated/app/reserva'
     | '/_authenticated/app/'
   fileRoutesById: FileRoutesById
 }
@@ -342,14 +468,104 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedAppIndexRouteImport
       parentRoute: typeof AuthenticatedAppRoute
     }
+    '/_authenticated/app/reserva': {
+      id: '/_authenticated/app/reserva'
+      path: '/reserva'
+      fullPath: '/app/reserva'
+      preLoaderRoute: typeof AuthenticatedAppReservaRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/relatorios': {
+      id: '/_authenticated/app/relatorios'
+      path: '/relatorios'
+      fullPath: '/app/relatorios'
+      preLoaderRoute: typeof AuthenticatedAppRelatoriosRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/perfil': {
+      id: '/_authenticated/app/perfil'
+      path: '/perfil'
+      fullPath: '/app/perfil'
+      preLoaderRoute: typeof AuthenticatedAppPerfilRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/orcamentos': {
+      id: '/_authenticated/app/orcamentos'
+      path: '/orcamentos'
+      fullPath: '/app/orcamentos'
+      preLoaderRoute: typeof AuthenticatedAppOrcamentosRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/metas': {
+      id: '/_authenticated/app/metas'
+      path: '/metas'
+      fullPath: '/app/metas'
+      preLoaderRoute: typeof AuthenticatedAppMetasRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/lancamentos': {
+      id: '/_authenticated/app/lancamentos'
+      path: '/lancamentos'
+      fullPath: '/app/lancamentos'
+      preLoaderRoute: typeof AuthenticatedAppLancamentosRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/dividas': {
+      id: '/_authenticated/app/dividas'
+      path: '/dividas'
+      fullPath: '/app/dividas'
+      preLoaderRoute: typeof AuthenticatedAppDividasRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/dashboard': {
+      id: '/_authenticated/app/dashboard'
+      path: '/dashboard'
+      fullPath: '/app/dashboard'
+      preLoaderRoute: typeof AuthenticatedAppDashboardRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/consultor-ia': {
+      id: '/_authenticated/app/consultor-ia'
+      path: '/consultor-ia'
+      fullPath: '/app/consultor-ia'
+      preLoaderRoute: typeof AuthenticatedAppConsultorIaRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
+    '/_authenticated/app/configuracoes': {
+      id: '/_authenticated/app/configuracoes'
+      path: '/configuracoes'
+      fullPath: '/app/configuracoes'
+      preLoaderRoute: typeof AuthenticatedAppConfiguracoesRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
   }
 }
 
 interface AuthenticatedAppRouteChildren {
+  AuthenticatedAppConfiguracoesRoute: typeof AuthenticatedAppConfiguracoesRoute
+  AuthenticatedAppConsultorIaRoute: typeof AuthenticatedAppConsultorIaRoute
+  AuthenticatedAppDashboardRoute: typeof AuthenticatedAppDashboardRoute
+  AuthenticatedAppDividasRoute: typeof AuthenticatedAppDividasRoute
+  AuthenticatedAppLancamentosRoute: typeof AuthenticatedAppLancamentosRoute
+  AuthenticatedAppMetasRoute: typeof AuthenticatedAppMetasRoute
+  AuthenticatedAppOrcamentosRoute: typeof AuthenticatedAppOrcamentosRoute
+  AuthenticatedAppPerfilRoute: typeof AuthenticatedAppPerfilRoute
+  AuthenticatedAppRelatoriosRoute: typeof AuthenticatedAppRelatoriosRoute
+  AuthenticatedAppReservaRoute: typeof AuthenticatedAppReservaRoute
   AuthenticatedAppIndexRoute: typeof AuthenticatedAppIndexRoute
 }
 
 const AuthenticatedAppRouteChildren: AuthenticatedAppRouteChildren = {
+  AuthenticatedAppConfiguracoesRoute: AuthenticatedAppConfiguracoesRoute,
+  AuthenticatedAppConsultorIaRoute: AuthenticatedAppConsultorIaRoute,
+  AuthenticatedAppDashboardRoute: AuthenticatedAppDashboardRoute,
+  AuthenticatedAppDividasRoute: AuthenticatedAppDividasRoute,
+  AuthenticatedAppLancamentosRoute: AuthenticatedAppLancamentosRoute,
+  AuthenticatedAppMetasRoute: AuthenticatedAppMetasRoute,
+  AuthenticatedAppOrcamentosRoute: AuthenticatedAppOrcamentosRoute,
+  AuthenticatedAppPerfilRoute: AuthenticatedAppPerfilRoute,
+  AuthenticatedAppRelatoriosRoute: AuthenticatedAppRelatoriosRoute,
+  AuthenticatedAppReservaRoute: AuthenticatedAppReservaRoute,
   AuthenticatedAppIndexRoute: AuthenticatedAppIndexRoute,
 }
 
