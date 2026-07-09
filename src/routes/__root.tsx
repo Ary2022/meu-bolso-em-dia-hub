@@ -111,17 +111,27 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const isAppSurface =
+    pathname === "/login" ||
+    pathname === "/onboarding" ||
+    pathname.startsWith("/app");
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <I18nProvider>
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">
-              <Outlet />
-            </main>
-            <Footer />
-          </div>
+          {isAppSurface ? (
+            <Outlet />
+          ) : (
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">
+                <Outlet />
+              </main>
+              <Footer />
+            </div>
+          )}
+          <Toaster theme="dark" position="top-center" richColors />
         </I18nProvider>
       </ThemeProvider>
     </QueryClientProvider>
