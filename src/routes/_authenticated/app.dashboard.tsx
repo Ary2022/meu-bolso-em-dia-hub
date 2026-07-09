@@ -75,7 +75,7 @@ function Dashboard() {
   async function fetchInsight() {
     setLoadingInsight(true);
     try {
-      const res = await generateAiInsight({ data: {} });
+      const res = await generateAiInsight();
       setInsight(res.insight);
     } catch {
       setInsight("Não foi possível gerar o insight agora. Tente novamente em instantes.");
