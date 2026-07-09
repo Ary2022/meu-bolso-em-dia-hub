@@ -424,7 +424,7 @@ function useInView<T extends HTMLElement>() {
 
 function LandingPremium() {
   return (
-    <div className="relative bg-[#0a0f0d] text-white" style={{ colorScheme: "dark" }}>
+    <div className="relative bg-background text-foreground" style={{ colorScheme: "dark" }}>
       <Hero />
       <Authority />
       <About />
@@ -457,7 +457,7 @@ function Hero() {
           transform: `translate3d(0, ${y * 0.25}px, 0) scale(1.08)`,
         }}
       />
-      <div className="absolute inset-0 -z-10 bg-black/55" />
+      <div className="absolute inset-0 -z-10 bg-background/55" />
       <div
         className="pointer-events-none absolute inset-0 -z-10"
         style={{ background: `radial-gradient(60% 50% at 50% 30%, ${NEON}22 0%, transparent 70%)` }}
@@ -467,7 +467,7 @@ function Hero() {
         {/* Glass brand card with Imagem 2 */}
         <div className="mx-auto max-w-2xl">
           <div
-            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl p-5 sm:p-6 animate-[fadeUp_0.9s_ease-out]"
+            className="relative overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.04] backdrop-blur-xl p-5 sm:p-6 animate-[fadeUp_0.9s_ease-out]"
             style={{ boxShadow: `0 20px 80px -20px ${NEON}55, inset 0 1px 0 #ffffff10` }}
           >
             <div className="pointer-events-none absolute -inset-24 -z-10" style={{ background: `radial-gradient(closest-side, ${NEON}22, transparent)` }} />
@@ -477,7 +477,7 @@ function Hero() {
               width={1600} height={800}
               className="w-full h-auto rounded-2xl"
             />
-            <div className="mt-3 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.25em] text-white/70">
+            <div className="mt-3 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.25em] text-foreground/70">
               <span className="h-px w-8" style={{ background: GOLD }} />
               {copy.hero.brandTagline}
               <span className="h-px w-8" style={{ background: GOLD }} />
@@ -486,14 +486,14 @@ function Hero() {
         </div>
 
         <div className="mt-10 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur">
+          <span className="inline-flex items-center gap-2 rounded-full border border-foreground/15 bg-foreground/5 px-3 py-1 text-xs font-medium text-foreground/80 backdrop-blur">
             <Sparkles className="h-3.5 w-3.5" style={{ color: NEON }} />
             {copy.hero.badge}
           </span>
           <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
             {copy.hero.titleBefore} <span style={{ color: NEON, textShadow: `0 0 40px ${NEON}66` }}>{copy.hero.titleHighlight}</span> {copy.hero.titleAfter}
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base text-white/75 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-2xl text-base text-foreground/75 sm:text-lg">
             {copy.hero.subtitle}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -506,7 +506,7 @@ function Hero() {
             </a>
             <a
               href="#conteudos"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur hover:bg-foreground/10"
             >
               {copy.hero.secondaryCta}
             </a>
@@ -533,7 +533,7 @@ function StatItem({ v, suffix, label, delay, start }: { v: number; suffix: strin
       <div className="font-display text-4xl font-extrabold sm:text-5xl" style={{ color: NEON, textShadow: `0 0 30px ${NEON}55` }}>
         {n.toLocaleString(locale)}{suffix}
       </div>
-      <div className="mt-2 text-xs uppercase tracking-wider text-white/60 sm:text-sm">{label}</div>
+      <div className="mt-2 text-xs uppercase tracking-wider text-foreground/60 sm:text-sm">{label}</div>
     </div>
   );
 }
@@ -548,13 +548,13 @@ function Authority() {
     { v: 0, suffix: "", label: copy.authority.labels[3] },
   ];
   return (
-    <section ref={ref} className="relative border-y border-white/5 bg-black/60">
+    <section ref={ref} className="relative border-y border-foreground/5 bg-background/60">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-14 sm:px-6 lg:grid-cols-4">
         {stats.map((s, i) => (
           <StatItem key={s.label} v={s.v} suffix={s.suffix} label={s.label} delay={i * 150} start={inView} />
         ))}
       </div>
-      <p className="pb-8 text-center text-xs text-white/50">
+      <p className="pb-8 text-center text-xs text-foreground/50">
         {copy.authority.disclaimer}
       </p>
     </section>
@@ -574,7 +574,7 @@ function About() {
           <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-5xl">
             {copy.about.titleBefore} <span style={{ color: NEON }}>{copy.about.titleHighlight}</span>
           </h2>
-          <p className="mt-5 text-base text-white/70 sm:text-lg">
+          <p className="mt-5 text-base text-foreground/70 sm:text-lg">
             {copy.about.body}
           </p>
         </div>
@@ -585,7 +585,7 @@ function About() {
             return (
             <article
               key={title}
-              className="group relative rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-[color:var(--neon)]"
+              className="group relative rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-[color:var(--neon)]"
               style={{ ["--neon" as any]: NEON }}
             >
               <div
@@ -595,7 +595,7 @@ function About() {
                 <Icon className="h-6 w-6" style={{ color: NEON }} />
               </div>
               <h3 className="mt-5 font-display text-lg font-bold">{title}</h3>
-              <p className="mt-1 text-sm text-white/60">{desc}</p>
+              <p className="mt-1 text-sm text-foreground/60">{desc}</p>
               <div
                 className="pointer-events-none absolute inset-0 -z-10 rounded-2xl opacity-0 transition-opacity group-hover:opacity-100"
                 style={{ boxShadow: `0 20px 60px -20px ${NEON}66` }}
@@ -614,11 +614,11 @@ function Mascot() {
   const { copy } = useLandingCopy();
   const icons = [Focus, Brain, Zap, Trophy];
   return (
-    <section className="relative overflow-hidden border-t border-white/5 py-24">
+    <section className="relative overflow-hidden border-t border-foreground/5 py-24">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:items-center">
         <div className="relative">
           <div
-            className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+            className="relative overflow-hidden rounded-[2rem] border border-foreground/10 bg-foreground/[0.04] p-6 backdrop-blur-xl"
             style={{ boxShadow: `0 30px 80px -30px ${NEON}77` }}
           >
             <img src={logoAsset.url} alt={copy.mascot.logoAlt} width={1600} height={800} loading="lazy" className="w-full h-auto rounded-2xl" />
@@ -631,21 +631,21 @@ function Mascot() {
           <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-5xl">
             {copy.mascot.titleBefore} <span style={{ color: NEON }}>{copy.mascot.titleHighlight}</span>
           </h2>
-          <p className="mt-4 text-white/70">
+          <p className="mt-4 text-foreground/70">
             {copy.mascot.body}
           </p>
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {copy.mascot.traits.map(({ title, desc }, index) => {
               const Icon = icons[index] ?? Focus;
               return (
-              <div key={title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 backdrop-blur">
+              <div key={title} className="rounded-2xl border border-foreground/10 bg-foreground/[0.03] p-4 backdrop-blur">
                 <div className="flex items-center gap-3">
                   <div className="grid h-10 w-10 place-items-center rounded-lg" style={{ background: `${NEON}22`, color: NEON }}>
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
                     <div className="font-semibold">{title}</div>
-                    <div className="text-xs text-white/60">{desc}</div>
+                    <div className="text-xs text-foreground/60">{desc}</div>
                   </div>
                 </div>
               </div>
@@ -669,7 +669,7 @@ function Tools() {
           <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-5xl">
             {copy.tools.titleBefore} <span style={{ color: NEON }}>{copy.tools.titleHighlight}</span>
           </h2>
-          <p className="mt-4 text-white/70">{copy.tools.subtitle}</p>
+          <p className="mt-4 text-foreground/70">{copy.tools.subtitle}</p>
         </div>
 
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
@@ -685,7 +685,7 @@ function Tools() {
 function GlassCard({ children, icon: Icon, title }: { children: React.ReactNode; icon: any; title: string }) {
   return (
     <div
-      className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl transition-transform hover:-translate-y-1"
+      className="relative overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.04] p-6 backdrop-blur-xl transition-transform hover:-translate-y-1"
       style={{ boxShadow: `0 20px 60px -30px ${NEON}55` }}
     >
       <div className="flex items-center gap-3">
@@ -702,10 +702,10 @@ function GlassCard({ children, icon: Icon, title }: { children: React.ReactNode;
 function Field({ label, ...rest }: React.InputHTMLAttributes<HTMLInputElement> & { label: string }) {
   return (
     <label className="block">
-      <span className="mb-1 block text-xs uppercase tracking-wider text-white/60">{label}</span>
+      <span className="mb-1 block text-xs uppercase tracking-wider text-foreground/60">{label}</span>
       <input
         {...rest}
-        className="w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white outline-none placeholder:text-white/30 focus:border-[color:var(--neon)] focus:ring-2 focus:ring-[color:var(--neon)]/40"
+        className="w-full rounded-lg border border-foreground/10 bg-background/30 px-3 py-2.5 text-sm text-foreground outline-none placeholder:text-foreground/30 focus:border-[color:var(--neon)] focus:ring-2 focus:ring-[color:var(--neon)]/40"
         style={{ ["--neon" as any]: NEON }}
       />
     </label>
@@ -736,21 +736,21 @@ function BudgetCalculator() {
         <Field label={copy.tools.budget.variable} type="number" min={0} onChange={(e) => setVariaveis(+e.target.value || 0)} />
         <Field label={copy.tools.budget.invest} type="number" min={0} onChange={(e) => setInvest(+e.target.value || 0)} />
       </div>
-      <div className="mt-5 rounded-2xl border border-white/10 bg-black/30 p-4">
+      <div className="mt-5 rounded-2xl border border-foreground/10 bg-background/30 p-4">
         <div className="flex items-baseline justify-between">
-          <span className="text-xs uppercase tracking-wider text-white/60">{copy.tools.budget.balance}</span>
+          <span className="text-xs uppercase tracking-wider text-foreground/60">{copy.tools.budget.balance}</span>
           <span className="font-display text-2xl font-extrabold" style={{ color: saldo >= 0 ? NEON : "#ef4444" }}>
             R$ {saldo.toLocaleString(locale)}
           </span>
         </div>
-        <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/10">
+        <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-foreground/10">
           <div className="h-full transition-all" style={{ width: `${pct}%`, background: `linear-gradient(90deg, ${NEON}, ${GOLD})` }} />
         </div>
-        <div className="mt-2 flex justify-between text-xs text-white/60">
+        <div className="mt-2 flex justify-between text-xs text-foreground/60">
           <span>{copy.tools.budget.committed}: {pct}%</span>
           <span>{copy.tools.budget.target}</span>
         </div>
-        <p className="mt-3 text-sm text-white/80">💡 {dica}</p>
+        <p className="mt-3 text-sm text-foreground/80">💡 {dica}</p>
       </div>
     </GlassCard>
   );
@@ -771,7 +771,7 @@ function GoalSimulator() {
         <Field label={copy.tools.goal.current} type="number" defaultValue={0} onChange={(e) => setAtual(+e.target.value || 0)} />
         <Field label={copy.tools.goal.monthly} type="number" defaultValue={500} onChange={(e) => setAporte(+e.target.value || 0)} />
       </div>
-      <div className="mt-5 space-y-3 rounded-2xl border border-white/10 bg-black/30 p-4">
+      <div className="mt-5 space-y-3 rounded-2xl border border-foreground/10 bg-background/30 p-4">
         <Row k={copy.tools.goal.missing} v={`R$ ${falta.toLocaleString(locale)}`} />
         <Row k={copy.tools.goal.time} v={meses > 0 ? `${meses.toLocaleString(locale)} ${copy.tools.goal.months} (${anos} ${copy.tools.goal.years})` : "—"} />
         <p className="text-sm" style={{ color: NEON }}>
@@ -785,8 +785,8 @@ function GoalSimulator() {
 function Row({ k, v }: { k: string; v: string }) {
   return (
     <div className="flex items-baseline justify-between">
-      <span className="text-xs uppercase tracking-wider text-white/60">{k}</span>
-      <span className="font-display text-lg font-bold text-white">{v}</span>
+      <span className="text-xs uppercase tracking-wider text-foreground/60">{k}</span>
+      <span className="font-display text-lg font-bold text-foreground">{v}</span>
     </div>
   );
 }
@@ -807,7 +807,7 @@ function FinancialChecklist() {
               <button
                 type="button"
                 onClick={() => setDone((s) => ({ ...s, [it]: !s[it] }))}
-                className="flex w-full items-center gap-3 rounded-xl border border-white/10 bg-black/30 px-3 py-3 text-left text-sm transition-all hover:border-[color:var(--neon)]"
+                className="flex w-full items-center gap-3 rounded-xl border border-foreground/10 bg-background/30 px-3 py-3 text-left text-sm transition-all hover:border-[color:var(--neon)]"
                 style={{ ["--neon" as any]: NEON }}
               >
                 <span
@@ -819,17 +819,17 @@ function FinancialChecklist() {
                 >
                   {active && <CheckCircle2 className="h-4 w-4 text-black" />}
                 </span>
-                <span className={active ? "text-white" : "text-white/80"}>{it}</span>
+                <span className={active ? "text-foreground" : "text-foreground/80"}>{it}</span>
               </button>
             </li>
           );
         })}
       </ul>
-      <div className="mt-4 rounded-2xl border border-white/10 bg-black/30 p-4">
-        <div className="flex items-center justify-between text-xs text-white/60">
+      <div className="mt-4 rounded-2xl border border-foreground/10 bg-background/30 p-4">
+        <div className="flex items-center justify-between text-xs text-foreground/60">
           <span>{copy.tools.checklist.progress}</span><span>{count}/{total}</span>
         </div>
-        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-white/10">
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-foreground/10">
           <div className="h-full transition-all" style={{ width: `${(count / total) * 100}%`, background: `linear-gradient(90deg, ${NEON}, ${GOLD})` }} />
         </div>
       </div>
@@ -856,7 +856,7 @@ function Content() {
             return (
             <article
               key={title}
-              className="group flex flex-col justify-between rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-all hover:-translate-y-1"
+              className="group flex flex-col justify-between rounded-3xl border border-foreground/10 bg-foreground/[0.04] p-6 backdrop-blur transition-all hover:-translate-y-1"
               style={{ boxShadow: `0 20px 60px -30px ${NEON}55` }}
             >
               <div>
@@ -864,11 +864,11 @@ function Content() {
                   <Icon className="h-6 w-6" />
                 </div>
                 <h3 className="mt-5 font-display text-xl font-bold">{title}</h3>
-                <p className="mt-2 text-sm text-white/70">{desc}</p>
+                <p className="mt-2 text-sm text-foreground/70">{desc}</p>
               </div>
               <Link
                 to="/dicas"
-                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white hover:border-[color:var(--neon)]"
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-foreground/15 bg-foreground/5 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-foreground hover:border-[color:var(--neon)]"
                 style={{ ["--neon" as any]: NEON }}
               >
                 {copy.content.read} <ArrowRight className="h-3.5 w-3.5" />
@@ -888,7 +888,7 @@ function Quote() {
   return (
     <section className="relative overflow-hidden py-24">
       <div
-        className="mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-white/10 px-6 py-20 text-center sm:px-16"
+        className="mx-auto max-w-6xl overflow-hidden rounded-[2.5rem] border border-foreground/10 px-6 py-20 text-center sm:px-16"
         style={{
           background: `linear-gradient(135deg, #052e1a 0%, #064e3b 50%, #022c22 100%)`,
           boxShadow: `0 40px 120px -40px ${NEON}66, inset 0 1px 0 #ffffff10`,
@@ -899,7 +899,7 @@ function Quote() {
           <span style={{ color: NEON, textShadow: `0 0 40px ${NEON}66` }}>{copy.quote.first}</span><br />
           {copy.quote.second}
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-base text-white/75 sm:text-lg">
+        <p className="mx-auto mt-6 max-w-2xl text-base text-foreground/75 sm:text-lg">
           {copy.quote.body}
         </p>
         <a
@@ -925,15 +925,15 @@ function LeadCapture() {
           <h2 className="mt-4 font-display text-3xl font-extrabold sm:text-5xl">
             {copy.lead.titleBefore} <span style={{ color: NEON }}>{copy.lead.titleHighlight}</span>
           </h2>
-          <p className="mt-4 text-white/70">
+          <p className="mt-4 text-foreground/70">
             {copy.lead.body}
           </p>
-          <p className="mt-6 text-sm italic text-white/60">
+          <p className="mt-6 text-sm italic text-foreground/60">
             {copy.lead.note}
           </p>
         </div>
         <div
-          className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur-xl"
+          className="rounded-3xl border border-foreground/10 bg-foreground/[0.04] p-6 backdrop-blur-xl"
           style={{ boxShadow: `0 30px 80px -30px ${NEON}66` }}
         >
           <LeadForm source="landing-premium" />
@@ -947,31 +947,31 @@ function LeadCapture() {
 function FooterPremium() {
   const { copy } = useLandingCopy();
   return (
-    <section className="border-t border-white/10 bg-black/60 py-14">
+    <section className="border-t border-foreground/10 bg-background/60 py-14">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <img src={logoAsset.url} alt="Meu Bolso em Dia" width={64} height={64} loading="lazy" className="h-10 w-auto rounded-md" />
             <span className="font-display text-lg font-bold">Meu Bolso em Dia</span>
           </div>
-          <p className="mt-4 max-w-md text-sm text-white/60">
+          <p className="mt-4 max-w-md text-sm text-foreground/60">
             {copy.footer.legalText}
           </p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold text-white">{copy.footer.contact}</h4>
-          <ul className="mt-3 space-y-2 text-sm text-white/70">
+          <h4 className="text-sm font-semibold text-foreground">{copy.footer.contact}</h4>
+          <ul className="mt-3 space-y-2 text-sm text-foreground/70">
             <li className="flex items-center gap-2"><Mail className="h-4 w-4" style={{ color: NEON }} /> contato@meubolsoemdia.com</li>
-            <li className="flex items-center gap-2"><Instagram className="h-4 w-4" style={{ color: NEON }} /> <a href="https://instagram.com/meubolsemdia" target="_blank" rel="noopener noreferrer" className="hover:text-white">/meubolsemdia</a></li>
-            <li className="flex items-center gap-2"><Youtube className="h-4 w-4" style={{ color: NEON }} /> <a href="https://youtube.com/@meubolsemdia" target="_blank" rel="noopener noreferrer" className="hover:text-white">/meubolsemdia</a></li>
+            <li className="flex items-center gap-2"><Instagram className="h-4 w-4" style={{ color: NEON }} /> <a href="https://instagram.com/meubolsemdia" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">/meubolsemdia</a></li>
+            <li className="flex items-center gap-2"><Youtube className="h-4 w-4" style={{ color: NEON }} /> <a href="https://youtube.com/@meubolsemdia" target="_blank" rel="noopener noreferrer" className="hover:text-foreground">/meubolsemdia</a></li>
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold text-white">{copy.footer.legal}</h4>
-          <ul className="mt-3 space-y-2 text-sm text-white/70">
-            <li><Link to="/privacidade" className="hover:text-white">{copy.footer.privacy}</Link></li>
-            <li><Link to="/termos" className="hover:text-white">{copy.footer.terms}</Link></li>
-            <li><Link to="/faq" className="hover:text-white">{copy.footer.notice}</Link></li>
+          <h4 className="text-sm font-semibold text-foreground">{copy.footer.legal}</h4>
+          <ul className="mt-3 space-y-2 text-sm text-foreground/70">
+            <li><Link to="/privacidade" className="hover:text-foreground">{copy.footer.privacy}</Link></li>
+            <li><Link to="/termos" className="hover:text-foreground">{copy.footer.terms}</Link></li>
+            <li><Link to="/faq" className="hover:text-foreground">{copy.footer.notice}</Link></li>
           </ul>
         </div>
       </div>
