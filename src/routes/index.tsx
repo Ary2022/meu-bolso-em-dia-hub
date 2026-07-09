@@ -424,7 +424,7 @@ function useInView<T extends HTMLElement>() {
 
 function LandingPremium() {
   return (
-    <div className="relative bg-background text-foreground" style={{ colorScheme: "dark" }}>
+    <div className="relative bg-background text-foreground">
       <Hero />
       <Authority />
       <About />
