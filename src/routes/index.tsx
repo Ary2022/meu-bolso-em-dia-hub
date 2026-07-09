@@ -497,13 +497,13 @@ function Hero() {
             {copy.hero.subtitle}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <a
-              href="#lead"
+            <Link
+              to="/app"
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold text-black transition-all hover:-translate-y-0.5"
               style={{ background: `linear-gradient(135deg, ${NEON}, ${NEON_SOFT})`, boxShadow: `0 10px 40px -10px ${NEON}` }}
             >
               {copy.hero.primaryCta} <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
             <a
               href="#conteudos"
               className="inline-flex items-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-6 py-3 text-sm font-semibold text-foreground backdrop-blur hover:bg-foreground/10"

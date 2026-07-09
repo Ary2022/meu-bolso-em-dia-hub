@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 type Theme = "light" | "dark";
-const Ctx = createContext<{ theme: Theme; toggle: () => void } | null>(null);
+const Ctx = createContext<{ theme: Theme; toggle: () => void; setTheme: (t: Theme) => void } | null>(null);
 const KEY = "mbed.theme";
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
@@ -24,7 +24,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   }, [theme]);
 
   return (
-    <Ctx.Provider value={{ theme, toggle: () => setTheme(t => (t === "dark" ? "light" : "dark")) }}>
+    <Ctx.Provider value={{ theme, toggle: () => setTheme(t => (t === "dark" ? "light" : "dark")), setTheme }}>
       {children}
     </Ctx.Provider>
   );

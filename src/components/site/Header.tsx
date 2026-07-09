@@ -51,13 +51,12 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:flex items-center gap-2">
-            <a
-              href="https://app.meubolsoemdia.com"
-              target="_blank" rel="noopener noreferrer"
+            <Link to="/app"
+              
               className="hidden sm:inline-flex items-center rounded-full border border-border px-3 py-1.5 text-sm font-medium text-foreground hover:bg-secondary"
             >
               {t("nav.openApp")}
-            </a>
+            </Link>
             <Link
               to="/contato"
               className="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground hover:opacity-90 shadow-soft"
@@ -91,13 +90,12 @@ export function Header() {
                 {t(n.key)}
               </Link>
             ))}
-            <a
-              href="https://app.meubolsoemdia.com"
-              target="_blank" rel="noopener noreferrer"
+            <Link to="/app"
+              
               className="px-2 py-2 rounded-md text-sm font-medium text-foreground hover:bg-secondary"
             >
               {t("nav.openApp")}
-            </a>
+            </Link>
             <Link
               to="/contato"
               onClick={() => setOpen(false)}
