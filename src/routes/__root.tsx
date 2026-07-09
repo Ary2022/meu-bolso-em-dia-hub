@@ -123,6 +123,9 @@ function RootComponent() {
     pathname === "/login" ||
     pathname === "/onboarding" ||
     pathname.startsWith("/app");
+  useEffect(() => {
+    import("@/lib/pwa").then((m) => m.registerPWA()).catch(() => {});
+  }, []);
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
