@@ -15,11 +15,16 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as RendaExtraRouteImport } from './routes/renda-extra'
 import { Route as PrivacidadeRouteImport } from './routes/privacidade'
 import { Route as PatrocinadoresRouteImport } from './routes/patrocinadores'
+import { Route as LoginRouteImport } from './routes/login'
 import { Route as LivrosRouteImport } from './routes/livros'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as DicasRouteImport } from './routes/dicas'
 import { Route as ContatoRouteImport } from './routes/contato'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedOnboardingRouteImport } from './routes/_authenticated/onboarding'
+import { Route as AuthenticatedAppRouteImport } from './routes/_authenticated/app'
+import { Route as AuthenticatedAppIndexRouteImport } from './routes/_authenticated/app.index'
 
 const TermosRoute = TermosRouteImport.update({
   id: '/termos',
@@ -51,6 +56,11 @@ const PatrocinadoresRoute = PatrocinadoresRouteImport.update({
   path: '/patrocinadores',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LivrosRoute = LivrosRouteImport.update({
   id: '/livros',
   path: '/livros',
@@ -71,10 +81,29 @@ const ContatoRoute = ContatoRouteImport.update({
   path: '/contato',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedOnboardingRoute = AuthenticatedOnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedAppRoute = AuthenticatedAppRouteImport.update({
+  id: '/app',
+  path: '/app',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedAppIndexRoute = AuthenticatedAppIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => AuthenticatedAppRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -83,12 +112,16 @@ export interface FileRoutesByFullPath {
   '/dicas': typeof DicasRoute
   '/faq': typeof FaqRoute
   '/livros': typeof LivrosRoute
+  '/login': typeof LoginRoute
   '/patrocinadores': typeof PatrocinadoresRoute
   '/privacidade': typeof PrivacidadeRoute
   '/renda-extra': typeof RendaExtraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
+  '/app': typeof AuthenticatedAppRouteWithChildren
+  '/onboarding': typeof AuthenticatedOnboardingRoute
+  '/app/': typeof AuthenticatedAppIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -96,26 +129,34 @@ export interface FileRoutesByTo {
   '/dicas': typeof DicasRoute
   '/faq': typeof FaqRoute
   '/livros': typeof LivrosRoute
+  '/login': typeof LoginRoute
   '/patrocinadores': typeof PatrocinadoresRoute
   '/privacidade': typeof PrivacidadeRoute
   '/renda-extra': typeof RendaExtraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
+  '/onboarding': typeof AuthenticatedOnboardingRoute
+  '/app': typeof AuthenticatedAppIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
   '/contato': typeof ContatoRoute
   '/dicas': typeof DicasRoute
   '/faq': typeof FaqRoute
   '/livros': typeof LivrosRoute
+  '/login': typeof LoginRoute
   '/patrocinadores': typeof PatrocinadoresRoute
   '/privacidade': typeof PrivacidadeRoute
   '/renda-extra': typeof RendaExtraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/sobre': typeof SobreRoute
   '/termos': typeof TermosRoute
+  '/_authenticated/app': typeof AuthenticatedAppRouteWithChildren
+  '/_authenticated/onboarding': typeof AuthenticatedOnboardingRoute
+  '/_authenticated/app/': typeof AuthenticatedAppIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -125,12 +166,16 @@ export interface FileRouteTypes {
     | '/dicas'
     | '/faq'
     | '/livros'
+    | '/login'
     | '/patrocinadores'
     | '/privacidade'
     | '/renda-extra'
     | '/sitemap.xml'
     | '/sobre'
     | '/termos'
+    | '/app'
+    | '/onboarding'
+    | '/app/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -138,33 +183,43 @@ export interface FileRouteTypes {
     | '/dicas'
     | '/faq'
     | '/livros'
+    | '/login'
     | '/patrocinadores'
     | '/privacidade'
     | '/renda-extra'
     | '/sitemap.xml'
     | '/sobre'
     | '/termos'
+    | '/onboarding'
+    | '/app'
   id:
     | '__root__'
     | '/'
+    | '/_authenticated'
     | '/contato'
     | '/dicas'
     | '/faq'
     | '/livros'
+    | '/login'
     | '/patrocinadores'
     | '/privacidade'
     | '/renda-extra'
     | '/sitemap.xml'
     | '/sobre'
     | '/termos'
+    | '/_authenticated/app'
+    | '/_authenticated/onboarding'
+    | '/_authenticated/app/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   ContatoRoute: typeof ContatoRoute
   DicasRoute: typeof DicasRoute
   FaqRoute: typeof FaqRoute
   LivrosRoute: typeof LivrosRoute
+  LoginRoute: typeof LoginRoute
   PatrocinadoresRoute: typeof PatrocinadoresRoute
   PrivacidadeRoute: typeof PrivacidadeRoute
   RendaExtraRoute: typeof RendaExtraRoute
@@ -217,6 +272,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PatrocinadoresRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/livros': {
       id: '/livros'
       path: '/livros'
@@ -245,6 +307,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContatoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -252,15 +321,62 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated/onboarding': {
+      id: '/_authenticated/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof AuthenticatedOnboardingRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/app': {
+      id: '/_authenticated/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AuthenticatedAppRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/app/': {
+      id: '/_authenticated/app/'
+      path: '/'
+      fullPath: '/app/'
+      preLoaderRoute: typeof AuthenticatedAppIndexRouteImport
+      parentRoute: typeof AuthenticatedAppRoute
+    }
   }
 }
 
+interface AuthenticatedAppRouteChildren {
+  AuthenticatedAppIndexRoute: typeof AuthenticatedAppIndexRoute
+}
+
+const AuthenticatedAppRouteChildren: AuthenticatedAppRouteChildren = {
+  AuthenticatedAppIndexRoute: AuthenticatedAppIndexRoute,
+}
+
+const AuthenticatedAppRouteWithChildren =
+  AuthenticatedAppRoute._addFileChildren(AuthenticatedAppRouteChildren)
+
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedAppRoute: typeof AuthenticatedAppRouteWithChildren
+  AuthenticatedOnboardingRoute: typeof AuthenticatedOnboardingRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedAppRoute: AuthenticatedAppRouteWithChildren,
+  AuthenticatedOnboardingRoute: AuthenticatedOnboardingRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   ContatoRoute: ContatoRoute,
   DicasRoute: DicasRoute,
   FaqRoute: FaqRoute,
   LivrosRoute: LivrosRoute,
+  LoginRoute: LoginRoute,
   PatrocinadoresRoute: PatrocinadoresRoute,
   PrivacidadeRoute: PrivacidadeRoute,
   RendaExtraRoute: RendaExtraRoute,
