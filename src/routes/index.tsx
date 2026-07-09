@@ -160,6 +160,18 @@ function Hero() {
 }
 
 /* ---------------- AUTHORITY ---------------- */
+function StatItem({ v, suffix, label, delay, start }: { v: number; suffix: string; label: string; delay: number; start: boolean }) {
+  const n = useCountUp(v, 1400 + delay, start);
+  return (
+    <div className="text-center">
+      <div className="font-display text-4xl font-extrabold sm:text-5xl" style={{ color: NEON, textShadow: `0 0 30px ${NEON}55` }}>
+        {n.toLocaleString("pt-BR")}{suffix}
+      </div>
+      <div className="mt-2 text-xs uppercase tracking-wider text-white/60 sm:text-sm">{label}</div>
+    </div>
+  );
+}
+
 function Authority() {
   const { ref, inView } = useInView<HTMLDivElement>();
   const stats = [
@@ -171,17 +183,9 @@ function Authority() {
   return (
     <section ref={ref} className="relative border-y border-white/5 bg-black/60">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 py-14 sm:px-6 lg:grid-cols-4">
-        {stats.map((s, i) => {
-          const n = useCountUp(s.v, 1400 + i * 150, inView);
-          return (
-            <div key={s.label} className="text-center">
-              <div className="font-display text-4xl font-extrabold sm:text-5xl" style={{ color: NEON, textShadow: `0 0 30px ${NEON}55` }}>
-                {n.toLocaleString("pt-BR")}{s.suffix}
-              </div>
-              <div className="mt-2 text-xs uppercase tracking-wider text-white/60 sm:text-sm">{s.label}</div>
-            </div>
-          );
-        })}
+        {stats.map((s, i) => (
+          <StatItem key={s.label} v={s.v} suffix={s.suffix} label={s.label} delay={i * 150} start={inView} />
+        ))}
       </div>
       <p className="pb-8 text-center text-xs text-white/50">
         Conteúdo educativo. Não é recomendação de investimento.
