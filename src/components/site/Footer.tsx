@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MessageCircle, Instagram } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import logoAsset from "@/assets/logo-meubolsoemdia.jpg.asset.json";
+import logoAsset from "@/assets/logo-meubolsoemdia-v2.png.asset.json";
 
 export function Footer() {
   const { t } = useI18n();

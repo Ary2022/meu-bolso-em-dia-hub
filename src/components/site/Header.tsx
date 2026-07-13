@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
-import logoAsset from "@/assets/logo-meubolsoemdia.jpg.asset.json";
+import logoAsset from "@/assets/logo-meubolsoemdia-v2.png.asset.json";
 
 const NAV = [
   { to: "/", key: "nav.home" },
