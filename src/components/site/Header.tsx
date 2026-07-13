@@ -51,12 +51,11 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:flex items-center gap-2">
-            <Link to="/app"
-              
+            <AccessAppButton
               className="hidden sm:inline-flex items-center rounded-full border border-border px-3 py-1.5 text-sm font-medium text-foreground hover:bg-secondary"
             >
               {t("nav.openApp")}
-            </Link>
+            </AccessAppButton>
             <Link
               to="/contato"
               className="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground hover:opacity-90 shadow-soft"
