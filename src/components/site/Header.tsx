@@ -4,7 +4,8 @@ import { Menu, X } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitcher } from "./LangSwitcher";
 import { ThemeToggle } from "./ThemeToggle";
-import logoAsset from "@/assets/logo-meubolsoemdia.jpg.asset.json";
+import logoAsset from "@/assets/logo-meubolsoemdia-v2.png.asset.json";
+import { AccessAppButton } from "./AccessAppButton";
 
 const NAV = [
   { to: "/", key: "nav.home" },
@@ -51,12 +52,11 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <div className="hidden md:flex items-center gap-2">
-            <Link to="/app"
-              
+            <AccessAppButton
               className="hidden sm:inline-flex items-center rounded-full border border-border px-3 py-1.5 text-sm font-medium text-foreground hover:bg-secondary"
             >
               {t("nav.openApp")}
-            </Link>
+            </AccessAppButton>
             <Link
               to="/contato"
               className="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground hover:opacity-90 shadow-soft"
@@ -90,12 +90,11 @@ export function Header() {
                 {t(n.key)}
               </Link>
             ))}
-            <Link to="/app"
-              
-              className="px-2 py-2 rounded-md text-sm font-medium text-foreground hover:bg-secondary"
+            <AccessAppButton
+              className="px-2 py-2 rounded-md text-sm font-medium text-foreground hover:bg-secondary text-left"
             >
               {t("nav.openApp")}
-            </Link>
+            </AccessAppButton>
             <Link
               to="/contato"
               onClick={() => setOpen(false)}
