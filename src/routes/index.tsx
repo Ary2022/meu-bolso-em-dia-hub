@@ -8,6 +8,7 @@ import {
 import { LeadForm } from "@/components/site/LeadForm";
 import heroBg from "@/assets/hero-bg.jpg.asset.json";
 import logoAsset from "@/assets/logo-meubolsoemdia-v2.png.asset.json";
+import { AccessAppButton } from "@/components/site/AccessAppButton";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
