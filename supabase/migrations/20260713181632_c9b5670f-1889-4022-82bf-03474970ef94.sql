@@ -1,0 +1,1 @@
+REVOKE EXECUTE ON FUNCTION public.increment_sponsor_metric(uuid, text) FROM authenticated;
