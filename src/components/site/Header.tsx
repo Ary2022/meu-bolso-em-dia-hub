@@ -89,12 +89,11 @@ export function Header() {
                 {t(n.key)}
               </Link>
             ))}
-            <Link to="/app"
-              
-              className="px-2 py-2 rounded-md text-sm font-medium text-foreground hover:bg-secondary"
+            <AccessAppButton
+              className="px-2 py-2 rounded-md text-sm font-medium text-foreground hover:bg-secondary text-left"
             >
               {t("nav.openApp")}
-            </Link>
+            </AccessAppButton>
             <Link
               to="/contato"
               onClick={() => setOpen(false)}
